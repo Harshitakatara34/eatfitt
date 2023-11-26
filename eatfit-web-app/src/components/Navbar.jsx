@@ -20,7 +20,7 @@ const Navbar = () => {
       ) : (
         <MenuContainer>
           {menuItems.map((item) => (
-            <Link href={item.link} key={item.id}>
+            <Link href={item.link} key={item.id}  _hover={{ backgroundColor: "#052465",color:"white",borderRadius:"5px" }}>
               {item.label}
             </Link>
           ))}
@@ -49,7 +49,7 @@ const MobileMenu = () => {
       <MobileNavBar isOpen={menuOpen}>
         <FaTimes className="close-icon" onClick={closeMenu} />
         {menuItems.map((item) => (
-          <Link href={item.link} key={item.id} onClick={closeMenu}>
+          <Link href={item.link} key={item.id} onClick={closeMenu} _hover={{ backgroundColor: "blue",color:"white" }}>
             {item.label}
           </Link>
         ))}
@@ -63,8 +63,8 @@ const MobileMenu = () => {
 
 const menuItems = [
   { id: 1, label: "About Us", link: "#about" },
-  { id: 2, label: "Menu", link: "#menu" },
-  { id: 3, label: "Testimonials", link: "#testimonials" },
+  { id: 2, label: "Testimonials", link: "#testimonials" },
+  { id: 3, label: "Menu", link: "#menu" },
   { id: 4, label: "Contact Us", link: "#contact" },
 ];
 
@@ -86,6 +86,10 @@ const StyledNavbar = styled.div`
     .close-icon {
       display: block;
       cursor: pointer;
+    }
+    a:hover {
+      background-color: blue; // Change color on hover
+      color: white; // Change text color on hover
     }
   }
 `;

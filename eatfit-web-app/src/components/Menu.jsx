@@ -4,7 +4,8 @@ import axios from "axios";
 import Card from "./Card";
 import styled from "styled-components";
 import CustomFilter from "./Filter";
-
+import eat from "../images/eat.gif"
+import { Image } from "@chakra-ui/react";
 const Menu = () => {
   const [foodItems, setFoodItems] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -43,15 +44,14 @@ const Menu = () => {
       });
   };
 
-  const renderLoadingSpinner = () => (
+  const Spinner = () => (
     <Box
-      height={"200px"}
-      width={"100%"}
+     
       display={"flex"}
       justifyContent={"center"}
       alignItems={"center"}
     >
-      <CircularProgress value={59} size="100px" thickness="4px" />
+     <Image src={eat}/>
     </Box>
   );
 
@@ -71,7 +71,7 @@ const Menu = () => {
     order={selectedOrder}
        Order={setSelectedOrder}
       />
-      {loading ? renderLoadingSpinner() : renderFoodItems()}
+      {loading ? Spinner() : renderFoodItems()}
     </StyledMenuContainer>
   );
 };

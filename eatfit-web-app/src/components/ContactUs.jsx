@@ -72,7 +72,7 @@ const ContactUs = () => {
               _hover={{
                 fontWeight: "bold",
                 cursor: "pointer",
-                backgroundColor: "gray",
+                backgroundColor: "#052465",
                 color: "white",
                 border: "none",
               }}

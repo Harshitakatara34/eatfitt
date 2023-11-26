@@ -1,35 +1,37 @@
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
-import maleAvatar from "../images/maleAvatar.jpg";
-import femaleAvatar from "../images/femaleAvatar.jpg";
+import Avatar1 from "../images/Avatar1.jpg";
+import Avatar2 from "../images/Avatar2.jpg";
+import Avatar3 from "../images/Avatar3.jpg";
+import Avatar4 from "../images/Avatar4.jpg";
 import styled from "styled-components";
 
 const testimonialsData = [
   {
     id: 1,
     name: "Alice Johnson",
-    avatar: femaleAvatar,
+    avatar: Avatar1,
     text:
       "EATFIT has revolutionized my approach to healthy living. The mouthwatering and nutritious meals make it a joy to prioritize wellness.",
   },
   {
     id: 2,
     name: "Bob Anderson",
-    avatar: maleAvatar,
+    avatar: Avatar2,
     text:
       "EATFIT has completely transformed my relationship with food. The wholesome and flavorful meals are a perfect blend of health and taste.",
   },
   {
     id: 3,
     name: "Eva Martinez",
-    avatar: femaleAvatar,
+    avatar: Avatar3,
     text:
       "I am grateful for EATFIT's role in making healthy living simple and enjoyable. The diverse meal options keep me excited about my dietary choices.",
   },
   {
     id: 4,
-    name: "Michael Brown",
-    avatar: maleAvatar,
+    name: "Amita Brown",
+    avatar: Avatar4,
     text:
       "EATFIT has become an integral part of my daily routine. The convenience, coupled with delicious and nutritious meals, is a game-changer for me.",
   },
@@ -41,11 +43,11 @@ const testimonialsData = [
 const Testimonials = () => {
   return (
     <DIV id="testimonials">
-      <Heading textAlign="center">Testimonials</Heading>
+      <Heading textAlign="center" mt={50} pb={30}>Testimonials</Heading>
       <GridContainer>
         {testimonialsData.map((testimonial) => (
-          <TestimonialBox key={testimonial.id}>
-            <TestimonialContent>
+          <TestimonialBox key={testimonial.id} >
+            <TestimonialContent >
               <ImageContainer>
                 <Image
                   borderRadius={"50%"}

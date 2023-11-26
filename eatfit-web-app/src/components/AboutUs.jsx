@@ -1,29 +1,32 @@
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
-import footerLogo from "../images/footerLogo.png";
+import footerLogo from "../images/footer.png";
 import styled from "styled-components";
-import { FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaTwitter, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 const AboutUs = () => {
   return (
     <DIV id="about">
       <ContentWrapper>
         <Image src={footerLogo} alt="Footer Logo" justifyContent={"center"} margin={"auto"}/>
-        <Text>
-          At Eatfit we offer healthy, yummy, honest & wholesome Indian food,
-          made with real ingredients, zero trans fat, and lots of love!
-          #HealthyMadeHappier
-        </Text>
+        <Box textAlign="center">
+          <Text>
+            Welcome to Eatfit – the ultimate destination for delicious, nutritious, and wholesome Indian cuisine. Our dishes are meticulously crafted with authentic ingredients, ensuring zero trans fat and infused with an abundance of love. At Eatfit, we believe in making healthy eating delightful, and every bite reflects our commitment to your well-being. Join us on the journey of #HealthyMadeHappier, where flavor meets nutrition, and every meal is a celebration of wellness. Embark on a culinary adventure with us and savor the goodness of real, wholesome ingredients that nourish your body and soul. Discover the joy of mindful eating at Eatfit, where every dish is a testament to our passion for health and happiness.
+          </Text>
+        </Box>
       </ContentWrapper>
-      <Heading as='h3' size={'lg'}>Follow us on</Heading>
-      <Box id="icons">
+      <Heading as='h3' size={'lg'} mt={10}>Connect with us</Heading>
+      <IconContainer>
         <a href="#" target="_blank" rel="noopener noreferrer">
           <FaTwitter size={30} />
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer">
           <FaInstagram size={30} />
         </a>
-      </Box>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <FaWhatsapp size={30} />
+        </a>
+      </IconContainer>
     </DIV>
   );
 };
@@ -40,10 +43,16 @@ const DIV = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 50vh; /* Adjust this value based on your needs */
+  height: 100vh; /* Adjust this value based on your needs */
   text-align: center;
 `;
 
 const ContentWrapper = styled.div`
   margin-bottom: 20px;
+`;
+
+const IconContainer = styled.div`
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
 `;
