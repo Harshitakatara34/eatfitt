@@ -46,7 +46,7 @@ const Testimonials = () => {
       <Heading textAlign="center" mt={50} pb={30}>Testimonials</Heading>
       <GridContainer>
         {testimonialsData.map((testimonial) => (
-          <TestimonialBox key={testimonial.id} >
+          <TestimonialBox key={testimonial.id} pb={40} >
             <TestimonialContent >
               <ImageContainer>
                 <Image

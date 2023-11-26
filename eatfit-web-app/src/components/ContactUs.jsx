@@ -35,8 +35,8 @@ const ContactUs = () => {
   };
 
   return (
-    <StyledContact id="contact">
-      <ContactForm>
+    <StyledContact id="contact" >
+      <ContactForm mt={80}>
         <Heading>Contact Us</Heading>
         <form onSubmit={handleSubmit}>
           <FormControl>
@@ -95,6 +95,7 @@ const StyledContact = styled.div`
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  margin-top:40px;
 `;
 
 const ContactForm = styled.div`

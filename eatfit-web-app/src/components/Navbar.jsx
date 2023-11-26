@@ -148,10 +148,10 @@ const MobileNavBar = styled.div`
     color: black;
     text-decoration: none;
     margin: 10px 0;
-    transition: color 0.3s ease; // Add transition for smooth color change
+    transition: color 0.3s ease; 
 
     &:hover {
-      background-color: blue; // Change color on hover
+      background-color: #052465;
     }
   }
 
