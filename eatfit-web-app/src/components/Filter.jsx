@@ -27,10 +27,18 @@ const Filter = ({ selectedFilter, setSelectedFilter, order, setOrder }) => {
       </Box>
       <Box id="sort">
         <Text>Sort By Price</Text>
-        <Button value={"asc"} onClick={() => handleOrder("asc")} _hover={{ backgroundColor: "#052465",color:"white" }}>
+        <Button
+          value={"asc"}
+          onClick={() => handleOrder("asc")}
+          _hover={{ backgroundColor: "#052465", color: "white" }}
+        >
           Low-High
         </Button>
-        <Button value={"desc"} onClick={() => handleOrder("desc")} _hover={{ backgroundColor: "#052465",color:"white" }}>
+        <Button
+          value={"desc"}
+          onClick={() => handleOrder("desc")}
+          _hover={{ backgroundColor: "#052465", color: "white" }}
+        >
           High-Low
         </Button>
       </Box>
@@ -42,7 +50,7 @@ const StyledFilter = styled.div`
   position: sticky;
   top: 0;
   background-color: white;
-  z-index: 60; 
+  z-index: 60;
   display: flex;
   justify-content: space-around;
   width: 100%;

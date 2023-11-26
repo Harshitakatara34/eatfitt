@@ -6,7 +6,7 @@ const HoverableImage = styled(Image)`
   transition: transform 0.3s ease;
 
   &:hover {
-    transform: scale(1.1); /* Adjust the scale value as needed */
+    transform: scale(1.3); 
   }
 `;
 
@@ -40,7 +40,7 @@ const Card = ({ title, name, cal, type, price, image }) => {
         right="0"
         padding="15px"
         backgroundColor="#fff"
-        borderTop="none" // Updated to remove the grey line
+        borderTop="none"
         zIndex="1"
       >
         <Text marginBottom="5px" fontWeight="bold" fontSize="18px">

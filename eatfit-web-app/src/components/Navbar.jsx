@@ -20,7 +20,15 @@ const Navbar = () => {
       ) : (
         <MenuContainer>
           {menuItems.map((item) => (
-            <Link href={item.link} key={item.id}  _hover={{ backgroundColor: "#052465",color:"white",borderRadius:"5px" }}>
+            <Link
+              href={item.link}
+              key={item.id}
+              _hover={{
+                backgroundColor: "#052465",
+                color: "white",
+                borderRadius: "5px",
+              }}
+            >
               {item.label}
             </Link>
           ))}
@@ -49,7 +57,12 @@ const MobileMenu = () => {
       <MobileNavBar isOpen={menuOpen}>
         <FaTimes className="close-icon" onClick={closeMenu} />
         {menuItems.map((item) => (
-          <Link href={item.link} key={item.id} onClick={closeMenu} _hover={{ backgroundColor: "blue",color:"white" }}>
+          <Link
+            href={item.link}
+            key={item.id}
+            onClick={closeMenu}
+            _hover={{ backgroundColor: "blue", color: "white" }}
+          >
             {item.label}
           </Link>
         ))}
@@ -59,7 +72,6 @@ const MobileMenu = () => {
 };
 
 // ... (remaining code)
-
 
 const menuItems = [
   { id: 1, label: "About Us", link: "#about" },
@@ -71,7 +83,7 @@ const menuItems = [
 const StyledNavbar = styled.div`
   position: sticky;
   top: 0;
-  z-index:200;
+  z-index: 200;
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -148,7 +160,7 @@ const MobileNavBar = styled.div`
     color: black;
     text-decoration: none;
     margin: 10px 0;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 
     &:hover {
       background-color: #052465;
@@ -161,8 +173,6 @@ const MobileNavBar = styled.div`
   }
 `;
 
-
 // ... (remaining code)
-
 
 export default Navbar;

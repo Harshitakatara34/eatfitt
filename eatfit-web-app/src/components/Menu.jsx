@@ -4,7 +4,7 @@ import axios from "axios";
 import Card from "./Card";
 import styled from "styled-components";
 import CustomFilter from "./Filter";
-import eat from "../images/eat.gif"
+import eat from "../images/eat.gif";
 import { Image } from "@chakra-ui/react";
 const Menu = () => {
   const [foodItems, setFoodItems] = useState([]);
@@ -45,13 +45,8 @@ const Menu = () => {
   };
 
   const Spinner = () => (
-    <Box
-     
-      display={"flex"}
-      justifyContent={"center"}
-      alignItems={"center"}
-    >
-     <Image src={eat}/>
+    <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
+      <Image src={eat} />
     </Box>
   );
 
@@ -68,8 +63,8 @@ const Menu = () => {
       <CustomFilter
         selectedFilter={selectedFilterType}
         setSelectedFilter={setSelectedFilterType}
-    order={selectedOrder}
-       Order={setSelectedOrder}
+        order={selectedOrder}
+        Order={setSelectedOrder}
       />
       {loading ? Spinner() : renderFoodItems()}
     </StyledMenuContainer>

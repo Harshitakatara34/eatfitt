@@ -11,43 +11,40 @@ const testimonialsData = [
     id: 1,
     name: "Alice Johnson",
     avatar: Avatar1,
-    text:
-      "EATFIT has revolutionized my approach to healthy living. The mouthwatering and nutritious meals make it a joy to prioritize wellness.",
+    text: "EATFIT has revolutionized my approach to healthy living. The mouthwatering and nutritious meals make it a joy to prioritize wellness.",
   },
   {
     id: 2,
     name: "Bob Anderson",
     avatar: Avatar2,
-    text:
-      "EATFIT has completely transformed my relationship with food. The wholesome and flavorful meals are a perfect blend of health and taste.",
+    text: "EATFIT has completely transformed my relationship with food. The wholesome and flavorful meals are a perfect blend of health and taste.",
   },
   {
     id: 3,
     name: "Eva Martinez",
     avatar: Avatar3,
-    text:
-      "I am grateful for EATFIT's role in making healthy living simple and enjoyable. The diverse meal options keep me excited about my dietary choices.",
+    text: "I am grateful for EATFIT's role in making healthy living simple and enjoyable. The diverse meal options keep me excited about my dietary choices.",
   },
   {
     id: 4,
     name: "Amita Brown",
     avatar: Avatar4,
-    text:
-      "EATFIT has become an integral part of my daily routine. The convenience, coupled with delicious and nutritious meals, is a game-changer for me.",
+    text: "EATFIT has become an integral part of my daily routine. The convenience, coupled with delicious and nutritious meals, is a game-changer for me.",
   },
 ];
 
 // Rest of the component remains unchanged
 
-
 const Testimonials = () => {
   return (
     <DIV id="testimonials">
-      <Heading textAlign="center" mt={50} pb={30}>Testimonials</Heading>
+      <Heading textAlign="center" mt={50} pb={30}>
+        Testimonials
+      </Heading>
       <GridContainer>
         {testimonialsData.map((testimonial) => (
-          <TestimonialBox key={testimonial.id} pb={40} >
-            <TestimonialContent >
+          <TestimonialBox key={testimonial.id} pb={40}>
+            <TestimonialContent>
               <ImageContainer>
                 <Image
                   borderRadius={"50%"}
