@@ -1,7 +1,7 @@
 import { Box, Heading, Image, Text } from "@chakra-ui/react";
-import React from "react";
 import footerLogo from "../images/footer.png";
 import styled from "styled-components";
+import React from "react";
 import { FaTwitter, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 const AboutUs = () => {
@@ -61,7 +61,7 @@ const DIV = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Adjust this value based on your needs */
+  height: 100vh;
   text-align: center;
 `;
 

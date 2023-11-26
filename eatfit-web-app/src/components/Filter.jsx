@@ -2,7 +2,7 @@ import { Box, Button, Select, Text } from "@chakra-ui/react";
 import React from "react";
 import styled from "styled-components";
 
-const Filter = ({ selectedFilter, setSelectedFilter, order, setOrder }) => {
+const Filter = ({ selectedFilter, setSelectedFilter,  setOrder }) => {
   const handleTypeChange = (e) => {
     setSelectedFilter(e.target.value);
   };

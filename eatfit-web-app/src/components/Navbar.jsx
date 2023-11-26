@@ -173,6 +173,6 @@ const MobileNavBar = styled.div`
   }
 `;
 
-// ... (remaining code)
+
 
 export default Navbar;

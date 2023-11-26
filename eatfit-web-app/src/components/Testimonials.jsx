@@ -35,25 +35,27 @@ const testimonialsData = [
 
 // Rest of the component remains unchanged
 
+// ... (import statements)
+
 const Testimonials = () => {
   return (
-    <DIV id="testimonials">
+    <TestimonialsContainer id="testimonials">
       <Heading textAlign="center" mt={50} pb={30}>
         Testimonials
       </Heading>
-      <GridContainer>
+      <TestimonialsGrid>
         {testimonialsData.map((testimonial) => (
           <TestimonialBox key={testimonial.id} pb={40}>
             <TestimonialContent>
-              <ImageContainer>
-                <Image
+              <AvatarContainer>
+                <AvatarImage
                   borderRadius={"50%"}
                   src={testimonial.avatar}
                   w={"100%"}
                   height={"100%"}
                   objectFit={"cover"}
                 />
-              </ImageContainer>
+              </AvatarContainer>
               <Heading as={"h4"} size={"lg"}>
                 {testimonial.name}
               </Heading>
@@ -61,12 +63,12 @@ const Testimonials = () => {
             <Text>{testimonial.text}</Text>
           </TestimonialBox>
         ))}
-      </GridContainer>
-    </DIV>
+      </TestimonialsGrid>
+    </TestimonialsContainer>
   );
 };
 
-const DIV = styled.div`
+const TestimonialsContainer = styled.div`
   width: 75%;
   margin: auto;
   padding-bottom: 20px;
@@ -76,7 +78,7 @@ const DIV = styled.div`
   }
 `;
 
-const GridContainer = styled.div`
+const TestimonialsGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -86,23 +88,27 @@ const GridContainer = styled.div`
   }
 `;
 
-const TestimonialBox = styled.div`
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-`;
-
 const TestimonialContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
 `;
 
-const ImageContainer = styled.div`
+const TestimonialBox = styled.div`
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+`;
+
+const AvatarContainer = styled.div`
   width: 100px;
   height: 100px;
   border-radius: 50%;
   overflow: hidden;
+`;
+
+const AvatarImage = styled(Image)`
+  // You can add any additional styling for the AvatarImage here
 `;
 
 export default Testimonials;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, CircularProgress } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import axios from "axios";
 import Card from "./Card";
 import styled from "styled-components";
@@ -10,11 +10,11 @@ const Menu = () => {
   const [foodItems, setFoodItems] = useState([]);
   const [loading, setLoading] = useState(false);
   const [selectedFilterType, setSelectedFilterType] = useState("");
-  const [selectedOrder, setSelectedOrder] = useState("");
+  const [ Order, setOrder] = useState("");
 
   useEffect(() => {
     fetchFoodItems();
-  }, [selectedFilterType, selectedOrder]);
+  }, [selectedFilterType, Order]);
 
   const fetchFoodItems = () => {
     setLoading(true);
@@ -25,11 +25,11 @@ const Menu = () => {
       apiUrl += `&type=${selectedFilterType}`;
     }
 
-    if (selectedOrder === "asc") {
+    if (Order === "asc") {
       apiUrl += `&_sort=price&_order=asc`;
     }
 
-    if (selectedOrder === "desc") {
+    if (Order === "desc") {
       apiUrl += `&_sort=price&_order=desc`;
     }
 
@@ -51,7 +51,7 @@ const Menu = () => {
   );
 
   const renderFoodItems = () => (
-    <Box id="foodMenu">
+    <Box id="menu">
       {foodItems.map((item) => (
         <Card key={item.id} {...item} />
       ))}
@@ -63,8 +63,8 @@ const Menu = () => {
       <CustomFilter
         selectedFilter={selectedFilterType}
         setSelectedFilter={setSelectedFilterType}
-        order={selectedOrder}
-        Order={setSelectedOrder}
+        order={Order}
+        setOrder={setOrder}
       />
       {loading ? Spinner() : renderFoodItems()}
     </StyledMenuContainer>
@@ -74,7 +74,7 @@ const Menu = () => {
 export default Menu;
 
 const StyledMenuContainer = styled.div`
-  #foodMenu {
+  #menu {
     width: 80%;
     margin: auto;
     display: grid;
@@ -83,7 +83,7 @@ const StyledMenuContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-    #foodMenu {
+    #menu {
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
   }

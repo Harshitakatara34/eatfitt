@@ -1,12 +1,12 @@
 import { Box, Button, Image, Text } from "@chakra-ui/react";
-import React from "react";
 import styled from "styled-components";
+import React from "react";
 
 const HoverableImage = styled(Image)`
   transition: transform 0.3s ease;
 
   &:hover {
-    transform: scale(1.3); 
+    transform: scale(1.3);
   }
 `;
 

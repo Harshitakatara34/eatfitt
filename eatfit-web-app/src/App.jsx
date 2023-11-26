@@ -1,10 +1,10 @@
 
 import './App.css';
-import Navbar from "./components/Navbar";
-import Testimonials from './components/Testimonials';
-import ContactUs from './components/ContactUs';
-import AboutUs from './components/AboutUs';
-import Menu from './components/Menu';
+import Navbar from "./Components/Navbar";
+import Testimonials from './Components/Testimonials';
+import ContactUs from './Components/ContactUs';
+import AboutUs from './Components/AboutUs';
+import Menu from './Components/Menu';
 function App() {
   return (
     <div className="App">

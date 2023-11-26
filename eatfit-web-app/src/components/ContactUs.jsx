@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   FormControl,
   FormLabel,
@@ -8,8 +7,9 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import styled from "styled-components";
 import { useToast } from "@chakra-ui/react";
+import styled from "styled-components";
+
 
 const ContactUs = () => {
   const [name, setName] = useState("");
