@@ -8,8 +8,7 @@ Home Page==>
 
 ==>
 
-![Capture2](https://github.com/Harshitakatara34/eatfitt/assets/112870595/d377a584-800d-47e2-89af-121511f2ca1a)
-
+![Capture2](https://github.com/Harshitakatara34/eatfitt/assets/112870595/1e01cfc2-4d4f-4673-8633-7c237909d192)
 
 
 ==>
