@@ -1,7 +1,9 @@
 import { Box, Button, Image, Text } from "@chakra-ui/react";
 import styled from "styled-components";
 import React from "react";
-
+import ProductModal from "./ProductModal";
+import { useState } from "react";
+import { Center } from "@chakra-ui/react";
 const HoverableImage = styled(Image)`
   transition: transform 0.3s ease;
 
@@ -11,6 +13,15 @@ const HoverableImage = styled(Image)`
 `;
 
 const Card = ({ title, name, cal, type, price, image }) => {
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  const handleAddButtonClick = () => {
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
   return (
     <Box
       fontFamily="BrandonTextWeb-Medium, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif"
@@ -56,6 +67,7 @@ const Card = ({ title, name, cal, type, price, image }) => {
           ₹{price}
         </Text>
         <Button
+         onClick={handleAddButtonClick}
           border="none"
           width="100%"
           color="white"
@@ -66,7 +78,12 @@ const Card = ({ title, name, cal, type, price, image }) => {
         >
           ADD
         </Button>
+       
+      
+       
+       
       </Box>
+      <ProductModal isOpen={isModalOpen} onClose={handleCloseModal} product={{ title, name, cal, type, price,image }} mt={"50%"}/>
     </Box>
   );
 };

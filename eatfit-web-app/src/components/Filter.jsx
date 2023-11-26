@@ -1,8 +1,9 @@
 import { Box, Button, Select, Text } from "@chakra-ui/react";
 import React from "react";
 import styled from "styled-components";
-
-const Filter = ({ selectedFilter, setSelectedFilter,  setOrder }) => {
+import { FaUps } from "react-icons/fa";
+import { FaArrowUp, FaArrowDown } from "react-icons/fa";
+const Filter = ({ selectedFilter, setSelectedFilter, setOrder }) => {
   const handleTypeChange = (e) => {
     setSelectedFilter(e.target.value);
   };
@@ -15,6 +16,7 @@ const Filter = ({ selectedFilter, setSelectedFilter,  setOrder }) => {
     <StyledFilter>
       <Box id="filter">
         <select value={selectedFilter} onChange={handleTypeChange}>
+        <option value={Filter}>Filter By</option>
           <option value="Sweets">Sweets</option>
           <option value="Drinks">Drinks</option>
           <option value="vegan">vegan</option>
@@ -25,20 +27,20 @@ const Filter = ({ selectedFilter, setSelectedFilter,  setOrder }) => {
         </select>
       </Box>
       <Box id="sort">
-        <Text>Sort By Price</Text>
+       
         <Button
           value={"asc"}
           onClick={() => handleOrder("asc")}
           _hover={{ backgroundColor: "#052465", color: "white" }}
         >
-          Low-High
+         Price <FaArrowUp/>
         </Button>
         <Button
           value={"desc"}
           onClick={() => handleOrder("desc")}
           _hover={{ backgroundColor: "#052465", color: "white" }}
         >
-          High-Low
+          Price <FaArrowDown/>
         </Button>
       </Box>
     </StyledFilter>
@@ -67,7 +69,7 @@ const StyledFilter = styled.div`
     color: black;
   }
   #sort {
-    width: 45%;
+    width: 30%;
     display: flex;
     justify-content: space-around;
     align-items: center;
