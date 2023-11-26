@@ -27,10 +27,10 @@ const Filter = ({ selectedFilter, setSelectedFilter, order, setOrder }) => {
       </Box>
       <Box id="sort">
         <Text>Sort By Price</Text>
-        <Button value={"asc"} onClick={() => handleOrder("asc")}>
+        <Button value={"asc"} onClick={() => handleOrder("asc")} _hover={{ backgroundColor: "#052465",color:"white" }}>
           Low-High
         </Button>
-        <Button value={"desc"} onClick={() => handleOrder("desc")}>
+        <Button value={"desc"} onClick={() => handleOrder("desc")} _hover={{ backgroundColor: "#052465",color:"white" }}>
           High-Low
         </Button>
       </Box>
