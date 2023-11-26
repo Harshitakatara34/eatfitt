@@ -15,7 +15,6 @@ const Filter = ({ selectedFilter, setSelectedFilter,  setOrder }) => {
     <StyledFilter>
       <Box id="filter">
         <select value={selectedFilter} onChange={handleTypeChange}>
-          <option value="">Select dietary preferences</option>
           <option value="Sweets">Sweets</option>
           <option value="Drinks">Drinks</option>
           <option value="vegan">vegan</option>
