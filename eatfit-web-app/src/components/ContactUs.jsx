@@ -58,7 +58,7 @@ const ContactUs = () => {
             />
           </FormControl>
           <FormControl>
-            <FormLabel>Description</FormLabel>
+            <FormLabel>Message</FormLabel>
             <StyledTextarea
               value={text}
               onChange={(e) => setText(e.target.value)}
